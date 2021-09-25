@@ -25,12 +25,12 @@ export default function AppBar(props) {
               <Link
                 className="headerAStyle"
                 // onClick={() => }
-                to="/projects"
+                to="/experienceandprojects"
                 style={{ cursor: "pointer", textDecoration:"none",  }}
               >
                Experience and Projects 
               </Link >|
-              <Link  to="/about"
+              <Link  to="/resume"
                 style={{ cursor: "pointer", textDecoration:"none" }}>
               <a
                 className="headerAStyle"

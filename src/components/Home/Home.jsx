@@ -2,12 +2,11 @@ import { useState } from "react";
 import "./Home.css";
 
 import HomeImage from "../../assets/coder.jpg";
-import { Grid, Button, Link } from "@mui/material";
-import Me from "../../assets/me.jpg"
-
+import { Grid, Button } from "@mui/material";
+import Me from "../../assets/me.jpg";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function Home() {
   const [image, setImage] = useState(false);
-
 
   function onClickSetImage() {
     if (image) {
@@ -17,10 +16,9 @@ function Home() {
     }
   }
 
-
   return (
     <>
-      <div >
+      <div>
         {/* <img src={BlackImage} /> */}
         <Grid container className="gradientBackground">
           <Grid
@@ -46,9 +44,11 @@ function Home() {
               >
                 <div class="word w1">COMPUTER ENGINEER 🧑‍🔬 </div>
                 <div class="word w2">SOFTWARE DEVELOPER 💻</div>
-                <div class="word w3"> WORKING CURRENTLY 👔
+                <div class="word w3">
+                  {" "}
+                  WORKING CURRENTLY 👔
                   <Link
-                    href="http://www.grssl.com/"
+                    to="http://www.grssl.com/"
                     style={{
                       fontSize: 15,
                       borderBottom: "1px blue solid",
@@ -56,55 +56,83 @@ function Home() {
                       cursor: "pointer",
                     }}
                   >
-                    @grassroots 
-                  </Link></div>
-                <div class="word w4">
-                 
-                  CLOUD ☁️ AND DATA 📈 ENTHSIAST
+                    @grassroots
+                  </Link>
                 </div>
-                <div class="word w5">LOVES  GAMES 🎮,  MUSIC 🎵</div>
+                <div class="word w4">CLOUD ☁️ AND DATA 📈 ENTHSIAST</div>
+                <div class="word w5">LOVES GAMES 🎮, MUSIC 🎵</div>
               </div>
               <div style={{ marginTop: 100 }} className="getToKnowMe">
-                GET TO KNOW ME BETTER<br/> <Button>Projects</Button>{" "}
-                <Button>About me</Button>
+                GET TO KNOW ME BETTER
+                <br />
+                <Link
+                  to="/experienceandprojects"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button>Experience and Projects</Button>
+                </Link>
+                <Link to="/resume" style={{ textDecoration: "none" }}>
+                  <Button>Resume/CV</Button>
+                </Link>
               </div>
             </div>
           </Grid>
           {image && (
-            <Grid item xs={12} md={6} lg={5} className="imageFromRight imageFromRightHide">
-              <img alt="Home" src={Me} style={{maxHeight:625, marginTop: 30}}/>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={5}
+              className="imageFromRight imageFromRightHide"
+            >
+              <img
+                alt="Home"
+                src={Me}
+                className="imageSetSizeMe"
+                style={{ marginTop: 30 }}
+              />
             </Grid>
-          ) }
+          )}
           {!image && (
-            
-              <Grid item xs={12} md={6} lg={5} className="imageFromRight imageFromRightHide">
-                <img alt="Home" src={HomeImage} className="imageSetSize" style={{ marginTop: 30}} />
-              </Grid>
-            )
-          }
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={5}
+              className="imageFromRight imageFromRightHide"
+            >
+              <img
+                alt="Home"
+                src={HomeImage}
+                className="imageSetSize"
+                style={{ marginTop: 30 }}
+              />
+            </Grid>
+          )}
           <Grid item xs={12} md={6} lg={6} className="imageFromRight ">
             {/* <img src={HomeImage} className="imageSetSize"/> */}
           </Grid>
-          <Grid item xs={12} md={6} lg={6} className="apperarIn" style={{textAlign: "center"}}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={6}
+            className="apperarIn"
+            style={{ textAlign: "center", display: "flex", justifyContent: "center" }}
+
+          >
             <Button
               style={{
                 fontSize: 20,
                 border: "2px yellow solid",
                 color: "orange",
+                textAlign: "center"
               }}
               onClick={() => onClickSetImage()}
             >
-              {image ? "Ah! snap go back " : "Want to see me?"}
+              {image ? "Ah! snap go back " : "This is me?"}
             </Button>
-            {/* {image === "showMe"?? } */}
-
-            {image}
-
-            {/* <div class="wrap">
-    <div class="block_1">Hello</div>
-    <div class="block_2">Hello</div>
-    <div class="block_3">Hello</div>
-</div> */}
+            
           </Grid>
         </Grid>
       </div>

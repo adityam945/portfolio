@@ -1,12 +1,47 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Link, Typography } from "@mui/material";
 import "./Projects.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import MoreIcon from "@mui/icons-material/More";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
+import { useState } from "react";
 
 export default function Projects() {
+  const [viewWork, setViewWork] = useState(true);
+
+  const [viewInternship, setViewInternship] = useState(true);
+
+  const [viewProjects, setViewProjects] = useState(true);
+
+
+  function internshipCondition(){
+    if(viewProjects){
+      setViewInternship(false)
+    }else{
+      setViewInternship(true)
+
+    }
+  }
+
+  function projectCondition(){
+    if(viewProjects){
+      setViewProjects(false)
+    }else{
+      setViewProjects(true)
+
+    }
+  }
+
+  function workCondition(){
+    if(viewProjects){
+      setViewWork(false)
+    }else{
+      setViewWork(true)
+
+    }
+  }
+
   return (
     <div style={{ backgroundColor: "#212121", minHeight: "82vh", padding: 20 }}>
       <Grid container spacing={2}>
@@ -19,7 +54,6 @@ export default function Projects() {
           className="apperarIn"
         >
           <div className="container1 div1">
-            {/* Programming, coding, and scripting<br/> languages i have used */}
             Experience and Projects
             <br />
             <div className="flip1 div1">
@@ -32,156 +66,21 @@ export default function Projects() {
               <div className="div1">
                 <div className="div1">Academic projects and Research</div>
               </div>
-              {/* <div className="div1"><div className="div1">Everything1</div></div> */}
             </div>
           </div>
         </Grid>
-        {internshipsArray.map((internArr) => (
-          <Grid
-            item
-            xs={12}
-            md={5}
-            lg={4}
-            style={{ marginTop: 20, display: "flex" }}
-            justifyContent="center"
-            alignItems="center"
-            className="apperarIn projectCards"
-          >
-            <Card className="titleStyleCard">
-              <Typography
-                className="titleStyleCard"
-                variant="h4"
-                style={{
-                  fontFamily: "Gemunu Libre, sans-serif",
-                  backgroundColor: "#4caf50",
-                  padding: 12,
-                  minHeight: 80,
-                  maxHeight: 80,
-                  overflowY: "auto",
-                }}
-              >
-                {internArr.projectTitle}
-                <Typography
-                  variant="h5"
-                  className="titleStyleCard"
-                  style={{ fontFamily: "Gemunu Libre, sans-serif", }}
-                > 
-                  {internArr.projectShortDesc}
-                </Typography>
-              </Typography>
-              <div style={{padding: 12,
-                  minHeight: 160,
-                  maxHeight: 160,
-                  overflowY: "auto",}}>
-                {internArr.projectDescription.map((internArrDesc) => (
-                  <><li style={{textAlign: "center", marginLeft: 10}}>{internArrDesc.description}</li><br/></>
-                ))}
-              </div>
-            </Card>
-          </Grid>
-        ))}
-        {projectCards.map((cardItem) => (
-          <Grid
-            item
-            xs={12}
-            md={5}
-            lg={4}
-            style={{ marginTop: 20, display: "flex" }}
-            justifyContent="center"
-            alignItems="center"
-            className="apperarIn projectCards"
-          >
-            <Card
-              style={{ minWidth: "100%" }}
-              className="titleStyleCardBodyHoverStyle titleStyleCard"
-            >
-              <Typography
-                variant="h4"
-                className="titleStyleCardTitle"
-                style={{
-                  paddingTop: 10,
-                  fontFamily: "Gemunu Libre, sans-serif",
-                  borderBottom: "1px solid black",
-                  padding: 12,
-                  minHeight: 115,
-                  maxHeight: 115,
-                  overflowY: "auto",
-
-                  flexDirection: "column",
-                }}
-              >
-                {cardItem.projectTitle}
-                <Typography
-                  variant="h5"
-                  className="titleStyleCard"
-                  style={{ fontFamily: "Gemunu Libre, sans-serif" }}
-                >
-                  {cardItem.projectShortDesc}
-                </Typography>
-              </Typography>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  borderBottom: "1.5px solid black",
-                }}
-              >
-                <div
-                  style={{
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: 5,
-                  }}
-                >
-                  {cardItem.projectImage}
-                </div>
-                <div
-                  style={{
-                    padding: 20,
-                    borderLeft: "1.5px solid black",
-                    minHeight: 160,
-                    maxHeight: 160,
-                    overflowY: "auto",
-                    alignItems: "center",
-                  }}
-                >
-                  {cardItem.projectDescription.map((cardItemDesc) => (
-                    <ul>
-                      <li>{cardItemDesc.description}</li>
-                    </ul>
-                  ))}
-                </div>
-              </div>
-
-              <CardActions
-                style={{
-                  marginTop: 20,
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                }}
-              >
-                {cardItem.github !== "" && (
-                  <a className="aNoStyle" href={cardItem.github}>
-                    Github <GitHubIcon style={{ marginLeft: 5 }} />{" "}
-                  </a>
-                )}
-                {cardItem.liveLink !== "" && (
-                  <a className="aNoStyle" href={cardItem.liveLink}>
-                    Visit Live <LinkIcon style={{ marginLeft: 5 }} />{" "}
-                  </a>
-                )}
-                {cardItem.otherMaterialLink !== "" && (
-                  <a className="aNoStyle" href={cardItem.otherMaterialLink}>
-                    {cardItem.otherMaterialLinkname}{" "}
-                    <MoreIcon style={{ marginLeft: 5 }} />{" "}
-                  </a>
-                )}
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
+        {/* <Grid  item
+          xs={12}
+          md={12}
+          lg={12}> 
+        <Typography variant="h4" className="filterText">Filter</Typography>
+        <Button color="warning" onClick={() => workCondition()}>Work Exp </Button>
+        <Button color="warning" onClick={() => internshipCondition()}>Internship Exp </Button>
+        <Button color="warning" onClick={() => projectCondition()}>Project </Button>
+          </Grid> */}
+        {viewWork && <WorkExperienceCardComponent />}
+        {viewInternship && <InternshipCardComponent />}
+        {viewProjects && <ProjectsCardComponent />}
       </Grid>
       <div style={{ marginBottom: 40 }} />
     </div>
@@ -472,7 +371,8 @@ const internshipsArray = [
       },
 
       {
-        description: "Was the lead developer of the UI of website.",
+        description:
+          "Was the lead developer website coding the main theme and pages on the website.",
       },
       {
         description:
@@ -504,3 +404,253 @@ const internshipsArray = [
     ],
   },
 ];
+
+const workExperience = [
+  {
+    id: "01",
+    projectTitle: "Grassroots - GRSSL",
+    projectShortDesc: "August 2020 - Present",
+    role: "Software Developer",
+    companyWebLink: "http://www.grssl.com/",
+    // email: "aditya.m@grassrootsbpo.in",
+    visible: "yes",
+  },
+  {
+    visible: "no",
+  },
+  {
+    visible: "no",
+  },
+];
+
+function WorkExperienceCardComponent() {
+  return (
+    <>
+      {workExperience.map((workExpArr) => (
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={4}
+          style={{ marginTop: 20, display: "flex" }}
+          justifyContent="center"
+          alignItems="center"
+          className="apperarIn projectCards"
+        >
+          {workExpArr.visible === "yes" ? (
+            <Card
+              className="titleStyleCard"
+              style={{
+                minWidth: "100%",
+                backgroundColor: workExperience.backgroundColor,
+              }}
+            >
+              <Typography
+                className="titleStyleCard"
+                variant="h4"
+                style={{
+                  fontFamily: "Gemunu Libre, sans-serif",
+                  backgroundColor: "#e53935",
+                  padding: 12,
+                  minHeight: 80,
+                  maxHeight: 140,
+                  overflowY: "auto",
+                  borderBottom: "1px solid black",
+                }}
+              >
+                {workExpArr.projectTitle}
+                <Typography
+                  variant="h5"
+                  className="titleStyleCard"
+                  style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+                >
+                  {workExpArr.projectShortDesc}
+                  <br />
+                  {workExpArr.role}
+                  <br />
+                  <a
+                    href={workExpArr.companyWebLink}
+                    className="companylink"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Grassroots
+                  </a>
+                </Typography>
+              </Typography>
+              <div></div>
+            </Card>
+          ) : null}
+        </Grid>
+      ))}
+    </>
+  );
+}
+
+function InternshipCardComponent() {
+  return (
+    <>
+      {internshipsArray.map((internArr) => (
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={4}
+          style={{ marginTop: 20, display: "flex" }}
+          justifyContent="center"
+          alignItems="center"
+          className="apperarIn projectCards"
+        >
+          <Card className="titleStyleCard">
+            <Typography
+              className="titleStyleCard"
+              variant="h4"
+              style={{
+                fontFamily: "Gemunu Libre, sans-serif",
+                backgroundColor: "#4caf50",
+                padding: 12,
+                minHeight: 80,
+                maxHeight: 80,
+                overflowY: "auto",
+              }}
+            >
+              {internArr.projectTitle}
+              <Typography
+                variant="h5"
+                className="titleStyleCard"
+                style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+              >
+                {internArr.projectShortDesc}
+              </Typography>
+            </Typography>
+            <div
+              style={{
+                padding: 12,
+                minHeight: 160,
+                maxHeight: 160,
+                padding: 20,
+                textAlign: "center",
+                overflowY: "auto",
+              }}
+            >
+              {internArr.projectDescription.map((internArrDesc) => (
+                <>
+                  <li>{internArrDesc.description}</li>
+                  <br />
+                </>
+              ))}
+            </div>
+          </Card>
+        </Grid>
+      ))}
+    </>
+  );
+}
+
+function ProjectsCardComponent() {
+  return (
+    <>
+      {projectCards.map((cardItem) => (
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={4}
+          style={{ marginTop: 20, display: "flex" }}
+          justifyContent="center"
+          alignItems="center"
+          className="apperarIn projectCards"
+        >
+          <Card
+            style={{ minWidth: "100%" }}
+            className="titleStyleCardBodyHoverStyle titleStyleCard"
+          >
+            <Typography
+              variant="h4"
+              className="titleStyleCardTitle"
+              style={{
+                paddingTop: 10,
+                fontFamily: "Gemunu Libre, sans-serif",
+                borderBottom: "1px solid black",
+                padding: 12,
+                minHeight: 115,
+                maxHeight: 115,
+                overflowY: "auto",
+
+                flexDirection: "column",
+              }}
+            >
+              {cardItem.projectTitle}
+              <Typography
+                variant="h5"
+                className="titleStyleCard"
+                style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+              >
+                {cardItem.projectShortDesc}
+              </Typography>
+            </Typography>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                borderBottom: "1.5px solid black",
+              }}
+            >
+              <div
+                style={{
+                  width: "20%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: 5,
+                }}
+              >
+                {cardItem.projectImage}
+              </div>
+              <div
+                style={{
+                  padding: 20,
+                  borderLeft: "1.5px solid black",
+                  minHeight: 160,
+                  maxHeight: 160,
+                  overflowY: "auto",
+                  alignItems: "center",
+                }}
+              >
+                {cardItem.projectDescription.map((cardItemDesc) => (
+                  <ul>
+                    <li>{cardItemDesc.description}</li>
+                  </ul>
+                ))}
+              </div>
+            </div>
+
+            <CardActions
+              style={{
+                marginTop: 20,
+                display: "flex",
+                justifyContent: "space-evenly",
+              }}
+            >
+              {cardItem.github !== "" && (
+                <a className="aNoStyle" href={cardItem.github}>
+                  Github <GitHubIcon style={{ marginLeft: 5 }} />{" "}
+                </a>
+              )}
+              {cardItem.liveLink !== "" && (
+                <a className="aNoStyle" href={cardItem.liveLink}>
+                  Visit Live <LinkIcon style={{ marginLeft: 5 }} />{" "}
+                </a>
+              )}
+              {cardItem.otherMaterialLink !== "" && (
+                <a className="aNoStyle" href={cardItem.otherMaterialLink}>
+                  {cardItem.otherMaterialLinkname}{" "}
+                  <MoreIcon style={{ marginLeft: 5 }} />{" "}
+                </a>
+              )}
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
+    </>
+  );
+}

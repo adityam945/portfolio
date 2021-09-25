@@ -179,7 +179,19 @@
   
   }
   }
+  .imageSetSizeMe{
+    max-height: 100%;;
+    max-width: 100%;
 
+  }
+
+  @media (min-width: 769px) {
+    .imageSetSizeMe{
+      max-height: 625px;
+        /* display: none; */
+    
+    }
+    }
 
 .titleText{
   font-family: 'Unica One', cursive;

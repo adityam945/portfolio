@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Projects from "./components/projects/Projects";
+import Resume from "./components/Resume/Resume";
 
 function App() {
   const [flip, setFlip] = useState("flip-card");
@@ -25,10 +26,10 @@ function App() {
         <AppBar setFlip={setFlip} />
 
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/resume">
+            <Resume />
           </Route>
-          <Route path="/projects">
+          <Route path="/experienceandprojects">
             <Projects />
           </Route>
           <Route exact path="/">
