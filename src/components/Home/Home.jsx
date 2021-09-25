@@ -8,21 +8,15 @@ import Me from "../../assets/me.jpg"
 function Home() {
   const [image, setImage] = useState(false);
 
-  const [styleName, setStyleName] = useState("");
 
   function onClickSetImage() {
     if (image) {
       setImage(false);
-      setStyleName("imageFromRight");
     } else {
       setImage(true);
-      setStyleName("");
     }
   }
-  const gradientBackground ={
-    background: "linear-gradient(-45deg,#00bcd4,#00bcd4, #b2ebf2 ,#e0f7fa,white,whitewhite,#eeeeee,#eeeeee,#eeeeee,#eeeeee,#eeeeee,#eeeeee)"
-  
-    }
+
 
   return (
     <>
@@ -78,13 +72,13 @@ function Home() {
           </Grid>
           {image && (
             <Grid item xs={12} md={6} lg={5} className="imageFromRight imageFromRightHide">
-              <img src={Me} style={{maxHeight:625, marginTop: 30}}/>
+              <img alt="Home" src={Me} style={{maxHeight:625, marginTop: 30}}/>
             </Grid>
           ) }
           {!image && (
             
               <Grid item xs={12} md={6} lg={5} className="imageFromRight imageFromRightHide">
-                <img src={HomeImage} className="imageSetSize" style={{ marginTop: 30}} />
+                <img alt="Home" src={HomeImage} className="imageSetSize" style={{ marginTop: 30}} />
               </Grid>
             )
           }
@@ -95,7 +89,6 @@ function Home() {
             <Button
               style={{
                 fontSize: 20,
-                color: "blue",
                 border: "2px yellow solid",
                 color: "orange",
               }}

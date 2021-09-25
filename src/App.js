@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
 import AppBar from "./components/Appbar/Appbar";

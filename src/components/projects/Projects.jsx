@@ -5,7 +5,6 @@ import LinkIcon from "@mui/icons-material/Link";
 import MoreIcon from "@mui/icons-material/More";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
-import { fontSize } from "@mui/system";
 
 export default function Projects() {
   return (
@@ -163,17 +162,17 @@ export default function Projects() {
                   justifyContent: "space-evenly",
                 }}
               >
-                {cardItem.github != "" && (
+                {cardItem.github !== "" && (
                   <a className="aNoStyle" href={cardItem.github}>
                     Github <GitHubIcon style={{ marginLeft: 5 }} />{" "}
                   </a>
                 )}
-                {cardItem.liveLink != "" && (
+                {cardItem.liveLink !== "" && (
                   <a className="aNoStyle" href={cardItem.liveLink}>
                     Visit Live <LinkIcon style={{ marginLeft: 5 }} />{" "}
                   </a>
                 )}
-                {cardItem.otherMaterialLink != "" && (
+                {cardItem.otherMaterialLink !== "" && (
                   <a className="aNoStyle" href={cardItem.otherMaterialLink}>
                     {cardItem.otherMaterialLinkname}{" "}
                     <MoreIcon style={{ marginLeft: 5 }} />{" "}
