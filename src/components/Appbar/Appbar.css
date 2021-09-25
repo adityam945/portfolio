@@ -1,0 +1,88 @@
+@font-face {
+
+    font-family: moonShine ;
+    src: url('https://www.1001fonts.com/scribble-font.html') format('truetype');
+  
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .headerComponent {  
+    /* This section calls the slideInFromLeft animation we defined above */
+  
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    
+    background: #333;
+    color: #fff;
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+  .headerTitle {
+    font-family: 'Press Start 2P', cursive;
+      font-size: 20px;
+      text-align: center;
+      color: yellow;
+      transition: 0.4s;
+
+  }
+  
+  .headerTitle:hover{
+    color: orange;
+  }
+  @media (min-width: 769px) {
+    .headerTitle {
+      font-family: 'Press Start 2P', cursive;
+        font-size: 42px;
+      cursor: pointer
+  
+    }
+  }
+  
+  
+  
+  .headerLinks{
+    display: flex;
+     justify-content: space-around;
+      align-items: center;
+      font-family: 'Rock Salt', cursive;
+
+  }
+  
+  
+  .headerAStyle{
+    color: #4caf50;
+    transition: 0.4s;
+  }
+  .headerAStyle:hover{
+    color: #f44336;
+
+  }
+
+  @media (min-width: 769px) {
+  .headerLinks{
+    font-family: 'Rock Salt', cursive;
+      font-size: 26px;
+      /* display: none; */
+  
+  }
+  }

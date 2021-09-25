@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import { useState } from "react";
+import "./App.css";
+import AppBar from "./components/Appbar/Appbar";
+import Footer from "./components/footer/Footer";
+import Home from "./components/Home/Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Projects from "./components/projects/Projects";
 
 function App() {
+  const [flip, setFlip] = useState("flip-card");
+  const mystyle={
+    // background: 'linear-gradient(to right, #430089, #82ffa1)',
+  // background: "linear-gradient(-45deg,#00bcd4,#00bcd4, #b2ebf2 ,#e0f7fa,white,whitewhite,#eeeeee,#eeeeee,#eeeeee,#eeeeee,#eeeeee,#eeeeee)",
+    
+    overflowX: "hidden",
+    overflowY: "hidden",
+    minHeight: "100vh",
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div
+        style={mystyle}
+      >
+        <AppBar setFlip={setFlip} />
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/">
+            <div
+              // className="gradientBackground"
+              style={{marginBottom: 50}}
+            >
+              <Home />
+            </div>
+          </Route>
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
