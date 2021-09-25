@@ -65,8 +65,8 @@ export default function Projects() {
                 <Typography
                   variant="h5"
                   className="titleStyleCard"
-                  style={{ fontFamily: "Gemunu Libre, sans-serif" }}
-                >
+                  style={{ fontFamily: "Gemunu Libre, sans-serif", }}
+                > 
                   {internArr.projectShortDesc}
                 </Typography>
               </Typography>
