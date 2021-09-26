@@ -14,14 +14,13 @@ export default function AppBar(props) {
       <div className="headerComponent">
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Grid container>
-            <Grid item xs={12} md={3} lg={3}>
+            <Grid item xs={12} md={6} lg={6} >
               <Link to="/" style={{ cursor: "pointer", textDecoration:"none", fontSize: 42 }}>
               <h2 className="headerTitle" >{"<Profile />"}</h2>
 
               </Link>
             </Grid>
-            <Grid item xs={12} md={5} lg={4.5}></Grid>
-            <Grid item xs={12} md={5} lg={4.5} className="headerLinks">
+           <Grid item xs={12} md={6} lg={6} className="headerLinks">
               <Link
                 className="headerAStyle"
                 // onClick={() => }
@@ -29,7 +28,7 @@ export default function AppBar(props) {
                 style={{ cursor: "pointer", textDecoration:"none",  }}
               >
                Experience and Projects 
-              </Link >|
+              </Link >
               <Link  to="/resume"
                 style={{ cursor: "pointer", textDecoration:"none" }}>
               <a

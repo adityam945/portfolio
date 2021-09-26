@@ -101,6 +101,10 @@ const projectCards = [
         description:
           "Faced complications and resolved complications in audio recording and submission",
       },
+      {
+        description:
+          "Used AWS S3 Butcket to stored audio files that was posted from the mobile app.",
+      },
     ],
     github: "",
     liveLink:
