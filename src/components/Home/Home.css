@@ -181,13 +181,14 @@
   }
   .imageSetSizeMe{
     max-height: 100%;;
-    max-width: 100%;
+    max-width: 80%;
 
   }
 
   @media (min-width: 769px) {
     .imageSetSizeMe{
-      max-height: 620px;
+      max-height: 80%;
+      max-width: 80%;
         /* display: none; */
     
     }

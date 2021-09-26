@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+.cardTitles{
+  font-family: 'Delius', cursive;
+  color: #fff;
+}
+
 .container1 {
   color:#fff;
   text-transform: uppercase;
@@ -192,3 +199,4 @@
     font-family: 'Rubik Mono One', sans-serif;
     color: #fff;
   }
+

@@ -130,7 +130,7 @@ function Home() {
               }}
               onClick={() => onClickSetImage()}
             >
-              {image ? "Ah! snap go back " : "This is me?"}
+              {image ? "Ah! snap go back " : "Want to see me?"}
             </Button>
             
           </Grid>

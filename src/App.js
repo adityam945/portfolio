@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/Resume/Resume";
 
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import PdfView from "./components/PDFView/PdfView";
+
 function App() {
   const [flip, setFlip] = useState("flip-card");
   const mystyle={
@@ -20,6 +23,7 @@ function App() {
 
   return (
     <Router>
+
       <div
         style={mystyle}
       >
@@ -31,6 +35,9 @@ function App() {
           </Route>
           <Route path="/experienceandprojects">
             <Projects />
+          </Route>
+          <Route path="/pdfview">
+            <PdfView />
           </Route>
           <Route exact path="/">
             <div
@@ -44,6 +51,7 @@ function App() {
 
         <Footer />
       </div>
+      
     </Router>
   );
 }
