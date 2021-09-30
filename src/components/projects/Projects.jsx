@@ -180,20 +180,21 @@ function InternshipCardComponent() {
                 fontFamily: "Gemunu Libre, sans-serif",
                 backgroundColor: "#4caf50",
                 padding: 12,
-                minHeight: 100,
-                maxHeight: 100,
+                minHeight: 50,
+                maxHeight: 50,
                 overflowY: "auto",
               }}
             >
               {internArr.projectTitle}
-              <Typography
+              
+            </Typography>
+            <Typography
                 variant="h5"
                 className="titleStyleCard"
-                style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+                style={{ fontFamily: "Gemunu Libre, sans-serif", backgroundColor: "#4caf50", }}
               >
                 {internArr.projectShortDesc}
               </Typography>
-            </Typography>
             <div
               style={{
                 padding: 12,
@@ -257,22 +258,25 @@ function ProjectsCardComponent() {
                 borderBottom: "1px solid black",
                 padding: 12,
                 backgroundColor: "#0277bd" ,
-                minHeight: 85,
-                maxHeight: 85,
+                minHeight: 65,
+                maxHeight: 65,
                 overflowY: "auto",
 
                 flexDirection: "column",
               }}
             >
               {cardItem.projectTitle}
-              <Typography
+             
+            </Typography>
+            <Typography
                 variant="h5"
                 className="titleStyleCard"
-                style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+                style={{ fontFamily: "Gemunu Libre, sans-serif",                 borderBottom: "1px solid black",
+
+              }}
               >
                 {cardItem.projectShortDesc}
               </Typography>
-            </Typography>
             <div
               style={{
                 display: "flex",
@@ -383,22 +387,24 @@ function ResearchCardComponent() {
                 borderBottom: "1px solid black",
                 backgroundColor: "#ff9800",
                 padding: 12,
-                minHeight: 115,
-                maxHeight: 115,
+                minHeight: 100,
+                maxHeight: 100,
                 overflowY: "auto",
 
                 flexDirection: "column",
               }}
             >
               {cardItem.projectTitle}
-              <Typography
+             
+            </Typography>
+            <Typography
                 variant="h5"
                 className="titleStyleCard"
-                style={{ fontFamily: "Gemunu Libre, sans-serif" }}
+                style={{ fontFamily: "Gemunu Libre, sans-serif",                borderBottom: "1px solid black",
+              }}
               >
                 {cardItem.projectShortDesc}
               </Typography>
-            </Typography>
             <div
               style={{
                 display: "flex",

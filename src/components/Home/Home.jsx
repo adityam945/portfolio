@@ -59,7 +59,7 @@ function Home() {
                     @grassroots
                   </Link>
                 </div>
-                <div class="word w4">CLOUD ☁️ AND DATA 📈 ENTHSIAST</div>
+                <div class="word w4">CLOUD ☁️ AND DATA 📈 ENTHUSIAST</div>
                 <div class="word w5">LOVES GAMES 🎮, MUSIC 🎵</div>
               </div>
               <div style={{ marginTop: 100 }} className="getToKnowMe">
