@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/Resume/Resume";
+import ContactUs from "./components/contact/contact"
 
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import PdfView from "./components/PDFView/PdfView";
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/pdfview">
             <PdfView />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
           </Route>
           <Route exact path="/">
             <div

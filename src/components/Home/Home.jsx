@@ -45,7 +45,6 @@ function Home() {
                 <div class="word w1">COMPUTER ENGINEER 🧑‍🔬 </div>
                 <div class="word w2">SOFTWARE DEVELOPER 💻</div>
                 <div class="word w3">
-                  {" "}
                   WORKING CURRENTLY 👔
                   <Link
                     to="http://www.grssl.com/"
