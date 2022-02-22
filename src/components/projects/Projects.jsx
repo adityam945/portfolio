@@ -481,7 +481,7 @@ const projectCards = [
   {
     id: "6",
     projectTitle: "Taralabalu Samsthana",
-    projectShortDesc: "Native Mobile Application for Religious institute",
+    projectShortDesc: "Native Mobile Application",
     projectDescription: [
       {
         description:
