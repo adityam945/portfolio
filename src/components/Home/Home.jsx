@@ -42,24 +42,14 @@ function Home() {
                   marginTop: 40,
                 }}
               >
-                <div class="word w1">COMPUTER ENGINEER 🧑‍🔬 </div>
-                <div class="word w2">SOFTWARE DEVELOPER 💻</div>
+                <div class="word w1">FORMER SOFTWARE DEVELOPER 💻 </div>
+                <div class="word w2">A COMPUTER GRAD STUDENT 🧑‍🎓<a style={{fontSize: 20, borderBottom: '1px solid red', color: 'red'}}>@fsu
+                </a> </div>
                 <div class="word w3">
-                  WORKING CURRENTLY 👔
-                  <Link
-                    to="http://www.grssl.com/"
-                    style={{
-                      fontSize: 15,
-                      borderBottom: "1px blue solid",
-                      textDecoration: "none",
-                      cursor: "pointer",
-                    }}
-                  >
-                    @grassroots
-                  </Link>
+                ✨ INTRESTED IN 🤔🤗
                 </div>
-                <div class="word w4">CLOUD ☁️ AND DATA 📈 ENTHUSIAST</div>
-                <div class="word w5">LOVES GAMES 🎮, MUSIC 🎵</div>
+                <div class="word w4">CLOUD ☁️ AND DATA 📈 PROBLEMS </div>
+                <div class="word w5">AND LOVES GAMES 🎮, MUSIC 🎵</div>
               </div>
               <div style={{ marginTop: 100 }} className="getToKnowMe">
                 GET TO KNOW ME BETTER

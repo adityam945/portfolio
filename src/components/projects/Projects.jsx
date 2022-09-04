@@ -27,7 +27,7 @@ export default function Projects() {
       <Grid container spacing={2}>
         <Grid
           item
-          xs={12}
+ ƒ         xs={12}
           md={12}
           lg={12}
           style={{ textAlign: "center" }}
@@ -132,7 +132,7 @@ function WorkExperienceCardComponent() {
                     className="companylink"
                     style={{ textDecoration: "none" }}
                   >
-                    Grassroots
+                    {workExpArr.companyName}
                   </a>
                 </Typography>
               </Typography>
@@ -775,14 +775,20 @@ const workExperience = [
   {
     id: "01",
     projectTitle: "Grassroots - GRSSL",
-    projectShortDesc: "August 2020 - Present",
+    projectShortDesc: "August 2021 - April 2022",
     role: "Software Developer",
     companyWebLink: "http://www.grssl.com/",
+    companyName: "Grassroots",
     // email: "aditya.m@grassrootsbpo.in",
     visible: "yes",
   },
   {
-    visible: "no",
+    id: "02",
+    projectTitle: "NH Robotics- Freelance",
+    projectShortDesc: "September 2021 - July 2022",
+    role: "Autonomous Robot Research and Development",
+    companyName: "NH Robotics",
+    visible: "yes",
   },
   {
     visible: "no",
