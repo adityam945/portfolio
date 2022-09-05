@@ -94,7 +94,7 @@ function Home() {
                 alt="Home"
                 src={HomeImage}
                 className="imageSetSize"
-                style={{ marginTop: 30 }}
+                style={{ marginTop: 0 }}
               />
             </Grid>
           )}
