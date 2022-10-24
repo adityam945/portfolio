@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document } from 'react-pdf';
 
-import ResumePdf from "../../assets/ADITYA M_Resume(1page-aug2022).pdf"
+import ResumePdf from "../../assets/ADITYA M_Resume(october2022).pdf"
 
 function Resume() {
 
