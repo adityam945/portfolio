@@ -479,6 +479,73 @@ function ResearchCardComponent() {
 
 const projectCards = [
   {
+    id: "12",
+    projectTitle: "Edge-Disjoint Partitioning",
+    projectShortDesc: "Sub-Graph shortest path finding problem",
+    projectDescription: [
+      {
+        description:
+          "In this project shortest path between two weighted graph is found without preprocessing of graph",
+      },
+      {
+        description:
+          "The weighted graph can be of N sub-graphs and the graphs are not preprocessed",
+      },
+    ],
+    github: "https://github.com/adityam945/EDP-JAVA",
+    liveLink: "",
+    otherMaterialLink: "",
+    projectImage: ["JAVA,", " Graphs,", " and Shortest Path", ""],
+    otherMaterialLinkname: "",
+    backgroundColorBody: "",
+    backgroundColorTitel: "",
+    backgroundColorAction: "",
+  },
+  {
+    id: "13",
+    projectTitle: "Image compression using Auto-Encoders",
+    projectShortDesc: "Neural Network AutoEncoders",
+    projectDescription: [
+      {
+        description:
+          "Trained four artificial neural network models on MINST, Fashion-MNIST, CIFAR-10 and STL image datasets",
+      },
+      {
+        description:
+          "Used Torch neural network modules to construction the model and BCE Loss to measure reconstruction error.",
+      },
+    ],
+    github: "https://github.com/adityam945/DL-autoencoders",
+    liveLink: "",
+    otherMaterialLink: "",
+    projectImage: ["Neural Networks,", " Torch,", " and Auto-encoders", ""],
+    otherMaterialLinkname: "",
+    backgroundColorBody: "",
+    backgroundColorTitel: "",
+    backgroundColorAction: "",
+  },
+  {
+    id: "14",
+    projectTitle: "Logistic Regression and ResNet",
+    projectShortDesc: "Neural Network",
+    projectDescription: [
+      {
+        description:
+          "	Programmed the gradient descent, loss function and backward loss calculation for the logistic regression neural network model. Constructed ResNet architecture using the torch neural network modules.",
+      },
+      
+    ],
+    github: "https://github.com/adityam945/DeepLearning_LogisticRegression.git",
+    liveLink: "",
+    otherMaterialLink: "",
+    projectImage: ["Neural Networks,", " Torch,", "ResNet", " and Logistic Regression", ""],
+    otherMaterialLinkname: "",
+    backgroundColorBody: "",
+    backgroundColorTitel: "",
+    backgroundColorAction: "",
+  },
+  
+  {
     id: "6",
     projectTitle: "Taralabalu Samsthana",
     projectShortDesc: "Native Mobile Application",
@@ -545,7 +612,7 @@ const projectCards = [
     id: "7",
     projectTitle: "VTU-CSE Native Mobile App",
     projectShortDesc:
-      "A mobile application that helps VTU students with academic materials",
+      "A mobile application with academic materials",
     projectDescription: [
       {
         description:
@@ -708,6 +775,7 @@ const projectCards = [
     backgroundColorTitel: "",
     backgroundColorAction: "",
   },
+  
 ];
 
 const internshipsArray = [
@@ -830,7 +898,32 @@ const ResearchExp = [
     visible: "yes",
   },
   {
-    visible: "no",
+    id: "11",
+    projectTitle:
+      "Medicinal Plants Classification",
+    projectShortDesc: "A Neural Network trained to classifiy medicinal plant",
+    projectDescription: [
+      {
+        description:
+          "A research project based on training a neural netwrok to recognize medicinal plants using pictures of leaves",
+      },
+      {
+        description:
+          "Presented in National Conference(2021)",
+      },
+    ],
+    github: "https://github.com/adityam945/",
+    liveLink: "",
+    otherMaterialLink: "",
+    projectImage: [
+      " Machine Learning,",
+      " Python, Neural Network,",
+      " and Torch",
+    ],
+    otherMaterialLinkname: "",
+    backgroundColorBody: "30",
+    backgroundColorTitel: "",
+    visible: "yes",
   }  ,
   {
     visible: "no",
